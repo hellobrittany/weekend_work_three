@@ -32,3 +32,13 @@ end
 # The add_a_crib method
 # The add_a_custom_amenity method
 
+ hotel_reservation = HotelReservation.new({customer_name: "John Jones",
+                                           date: "3/1/2018", 
+                                           room_number: "1248", 
+                                           amenities: [] })
+p hotel_reservation.date
+
+hotel_reservation.add_a_crib
+hotel_reservation.add_a_fridge
+hotel_reservation.add_a_custom_amenity("jacuzzi")
+p hotel_reservation.amenities

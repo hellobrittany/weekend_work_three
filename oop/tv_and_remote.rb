@@ -10,3 +10,53 @@
 # increment_volume (this will increase the tv's volume by 1)
 # decrement_volume (this will decrease the tv's volume by 1)
 # set_channel (this will change the tv's channel to whatever integer is passed to this method)
+
+class Tv
+	attr_accessor :power, :volume, :channel
+
+	def initialize
+		@power = false
+		@volume = 0
+		@channel = 0
+	end
+	
+end
+
+
+class Remote < Tv
+
+	attr_accessor :tv
+
+	def inititalize(tv)
+		@tv = tv
+	end
+
+	def toggle_power
+		!@power
+	end
+
+	def increment_volume
+		@volume += 1
+	end
+
+	def decrement_volume
+		@volume -= 1
+	end
+
+	def set_channel(channel_number)
+		@channel = channel_number
+	end
+end	
+
+tv = Tv.new
+
+remote = Remote.new
+
+p remote.toggle_power
+p remote.increment_volume
+p remote.increment_volume
+p remote.increment_volume
+p remote.increment_volume
+p remote.decrement_volume
+p remote.decrement_volume
+p remote.set_channel(99)
