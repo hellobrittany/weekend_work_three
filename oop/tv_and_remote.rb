@@ -23,34 +23,34 @@ class Tv
 end
 
 
-class Remote < Tv
+class Remote
 
 	attr_accessor :tv
 
-	def inititalize(tv)
+	def initialize(tv)
 		@tv = tv
 	end
 
 	def toggle_power
-		!@power
+		!@tv.power
 	end
 
 	def increment_volume
-		@volume += 1
+		@tv.volume += 1
 	end
 
 	def decrement_volume
-		@volume -= 1
+		@tv.volume -= 1
 	end
 
 	def set_channel(channel_number)
-		@channel = channel_number
+		@tv.channel = channel_number
 	end
 end	
 
 tv = Tv.new
 
-remote = Remote.new
+remote = Remote.new(tv)
 
 p remote.toggle_power
 p remote.increment_volume

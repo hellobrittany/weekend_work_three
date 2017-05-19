@@ -3,8 +3,15 @@
 # numbers, inclusive.
 
 def sum_of_range(array)
-	#much struggle
-		
+	if array[0] < array[1]
+		range = (array[0]..array[1])
+	else
+		range = (array[1]..array[0])
+	end	
+			
+
+	range.to_a.sum
+
 	
 end
 

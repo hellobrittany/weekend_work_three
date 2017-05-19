@@ -23,6 +23,7 @@ class HotelReservation
   def add_a_custom_amenity(amenity)
     @amenities << amenity
   end
+
 end
 
 
@@ -41,4 +42,10 @@ p hotel_reservation.date
 hotel_reservation.add_a_crib
 hotel_reservation.add_a_fridge
 hotel_reservation.add_a_custom_amenity("jacuzzi")
+hotel_reservation.amenities << "test"
 p hotel_reservation.amenities
+hotel_reservation.date = "3/1/2019"
+p hotel_reservation.date
+
+
+
